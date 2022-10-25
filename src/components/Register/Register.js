@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { AuthContext } from '../../contexts/AuthProvider';
 import './Register.css'
 const Register = () => {
     const { createUser } = useContext(AuthContext)
-
+    const [error, setError] = useState('')
     const handleSubmit = (event) => {
         event.preventDefault()
         const form = event.target
@@ -19,8 +19,12 @@ const Register = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
+                form.reset()
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error)
+                setError(error.message)
+            })
     }
     return (
         <div className=' login-div'>
@@ -45,14 +49,14 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" name='password' required />
                 </Form.Group>
-
+                <Form.Text className="text-danger">
+                    {error}
+                </Form.Text>
                 <span><p>Already have an account?<Link to='/login'>Login Now</Link></p></span>
                 <Button variant="primary" type="submit">
                     register
                 </Button>
-                <Form.Text className="text-danger">
 
-                </Form.Text>
             </Form>
         </div>
     );
