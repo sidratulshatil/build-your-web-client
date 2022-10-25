@@ -7,6 +7,8 @@ import Faq from "../../Faq/Faq";
 import Main from "../../layout/Main";
 import Login from "../../Login/Login";
 import Register from "../../Register/Register";
+import CheackOut from '../../CheackOut/CheackOut'
+import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -18,6 +20,7 @@ export const routes = createBrowserRouter([
             { path: '/blog', element: <Blog></Blog> },
             { path: '/login', element: <Login></Login> },
             { path: '/register', element: <Register></Register> },
+            { path: '/cheackout', element: <PrivateRoute><CheackOut></CheackOut></PrivateRoute> },
             { path: '*', element: <Error></Error> },
         ]
     }

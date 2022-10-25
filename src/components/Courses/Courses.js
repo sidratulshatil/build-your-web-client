@@ -16,7 +16,7 @@ const Courses = () => {
             </div>
             <div className='course-card-container d-grid col-4'>
                 {
-                    course.map(c => <Card style={{ width: '18rem' }}>
+                    course.map(c => <Card key={c.no} style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={c.img} />
                         <Card.Body>
                             <Card.Title>{c.name}</Card.Title>

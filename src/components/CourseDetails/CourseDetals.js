@@ -1,7 +1,8 @@
 import React from 'react';
-import { Card, Image } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { Button, Card, Image } from 'react-bootstrap';
+import { Link, useLoaderData } from 'react-router-dom';
 import './CourseDetails.css'
+import { FaArrowRight } from 'react-icons/fa'
 const CourseDetals = () => {
     const course = useLoaderData()
     const { name, img, details } = course
@@ -13,7 +14,7 @@ const CourseDetals = () => {
                 <Card.Text>
                     {details}
                 </Card.Text>
-
+                <Link to='/cheackout'> <Button className='checkout-btn'>CheckOut <FaArrowRight></FaArrowRight></Button></Link>
             </Card.Body>
         </Card>
     );

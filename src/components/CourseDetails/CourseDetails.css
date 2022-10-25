@@ -1,5 +1,15 @@
 .course-detail-body {
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 20px;
     border: 1px solid rebeccapurple;
+}
+
+.checkout-btn {
+    background-color: red;
+    border: none;
+}
+
+.checkout-btn:hover {
+    background-color: rgb(185, 10, 10);
 }

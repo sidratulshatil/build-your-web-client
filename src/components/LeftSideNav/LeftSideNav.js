@@ -6,7 +6,7 @@ const LeftSideNav = ({ course }) => {
     return (
         <div className='list-container'>
             {
-                course.map(c => <Link className='btn-text' to={`/courses/${c._id}`}> <p>{c.no}-{c.name}</p></Link>)
+                course.map(c => <Link key={c.no} className='btn-text' to={`/courses/${c._id}`}> <p>{c.no}-{c.name}</p></Link>)
             }
         </div>
     );
