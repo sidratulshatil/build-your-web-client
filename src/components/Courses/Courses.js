@@ -11,16 +11,16 @@ const Courses = () => {
     return (
         <div className='course-container'>
             <div>
-                <LeftSideNav></LeftSideNav>
+                <LeftSideNav course={course}></LeftSideNav>
             </div>
-            <div>
+            <div className='course-card-container'>
                 {
                     course.map(c => <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={c.img} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>{c.name}</Card.Title>
                             <Card.Text>
-                                {c.details}
+                                {c.details.slice(0, 100) + '...'}
                             </Card.Text>
                             <Button variant="primary">Go somewhere</Button>
                         </Card.Body>

@@ -2,3 +2,13 @@
     display: flex;
     gap: 150px;
 }
+
+.course-container img {
+    height: 50%;
+}
+
+.course-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}

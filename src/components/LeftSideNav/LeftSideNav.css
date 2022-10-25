@@ -2,4 +2,12 @@
     border: 1px solid black;
     height: 100%;
     padding: 20px;
+    background-color: rgb(205, 154, 165);
+}
+
+.list-container p {
+    padding: 8px;
+    background-color: rgb(163, 20, 20);
+    border-radius: 10px;
+    color: azure;
 }
