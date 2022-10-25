@@ -10,8 +10,8 @@ import Register from "../../Register/Register";
 export const routes = createBrowserRouter([
     {
         path: '/', element: <Main></Main>, children: [
-            { path: '/', element: <Courses></Courses> },
-            { path: '/courses', element: <Courses></Courses> },
+            { path: '/', element: <Courses></Courses>, loader: () => fetch('http://localhost:5000/courses') },
+            { path: '/courses/:id', element: <Courses></Courses>, loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`) },
             { path: '/faq', element: <Faq></Faq> },
             { path: '/blog', element: <Blog></Blog> },
             { path: '/login', element: <Login></Login> },
