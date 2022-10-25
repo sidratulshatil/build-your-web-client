@@ -1,11 +1,11 @@
 import React from 'react';
 import './LeftSideNav.css'
 const LeftSideNav = ({ course }) => {
-    const { name, id } = course
+    const { name, id, no } = course
     return (
         <div className='list-container'>
             {
-                course.map(c => <p>{c.id}-{c.name}</p>)
+                course.map(c => <p>{c.no}-{c.name}</p>)
             }
         </div>
     );
