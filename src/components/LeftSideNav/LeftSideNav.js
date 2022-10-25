@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './LeftSideNav.css'
 const LeftSideNav = ({ course }) => {
-    const { name, id, no } = course
+    const { name, _id, no } = course
     return (
         <div className='list-container'>
             {
-                course.map(c => <p>{c.no}-{c.name}</p>)
+                course.map(c => <Link to={`/courses/${c._id}`}> <p>{c.no}-{c.name}</p></Link>)
             }
         </div>
     );
