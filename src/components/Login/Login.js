@@ -1,3 +1,4 @@
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { ButtonGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
@@ -9,6 +10,30 @@ import './Login.css'
 const Login = () => {
     const { signIn } = useContext(AuthContext)
     const [error, setError] = useState('')
+    const { providerLogin, githubLogin } = useContext(AuthContext)
+    const googleProvider = new GoogleAuthProvider()
+    const githubProvider = new GithubAuthProvider()
+
+    const handleGoogleLogin = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user
+                console.log(user)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+    const handleGithubLogin = () => {
+        githubLogin(githubProvider)
+            .then(result => {
+                const user = result.user
+                console.log(user)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
     const handleSubmit = (event) => {
         event.preventDefault()
         const form = event.target
@@ -43,8 +68,8 @@ const Login = () => {
                 </Form.Text>
                 <div className='social-login-btn'>
                     <ButtonGroup vertical>
-                        <Button className='mb-2' variant="outline-primary"> <FaGoogle></FaGoogle> Log in with Google</Button>
-                        <Button variant="outline-dark"><FaGithub></FaGithub> Log in with Github</Button>
+                        <Button onClick={handleGoogleLogin} className='mb-2' variant="outline-primary"> <FaGoogle></FaGoogle> Log in with Google</Button>
+                        <Button onClick={handleGithubLogin} variant="outline-dark"><FaGithub></FaGithub> Log in with Github</Button>
                     </ButtonGroup>
                 </div>
 

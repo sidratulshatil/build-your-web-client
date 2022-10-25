@@ -17,3 +17,15 @@
     padding: 5px;
     border-radius: 10px;
 }
+
+.my {
+    margin-top: 50%;
+
+}
+
+@media screen and (max-width:688px) {
+    .my {
+        margin-top: 0;
+
+    }
+}

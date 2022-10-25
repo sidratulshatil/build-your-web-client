@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Container, Navbar, Nav, Button, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
 import ToggleBtn from '../ToggleBtn/ToggleBtn';
 import './Header.css'
+import { AuthContext } from '../../contexts/AuthProvider';
 const Header = () => {
-
+    const { user, logOut } = useContext(AuthContext)
+    console.log(user?.displayName)
+    const handleLogout = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     const [toggle, setToggle] = useState(false)
     const handleToggleChange = () => {
         setToggle(!toggle)
@@ -23,33 +30,34 @@ const Header = () => {
                             <Link className=' text-style ' to={'/'}>Courses</Link>
                             <Link className='text-style' to={'faq'}>Faq</Link>
                             <Link className='text-style' to={'blog'}>Blog</Link>
-                            <Link className='text-style' to={'login'}>Login</Link>
-                            <Link className='text-style' to={'register'}>Register</Link>
+
 
 
                         </Nav>
                         <Nav>
-                            {/* <Nav.Link href="#deets">
+                            <Nav.Link href="#deets">
                                 {
                                     user?.uid ?
                                         <>
-                                            <span></span>
-                                            <Button variant="primary" >LogOut</Button>
+                                            <span>{user?.displayName}</span>
+                                            <Button className='ms-2' onClick={handleLogout} variant="primary" >LogOut</Button>
                                         </>
                                         :
                                         <>
-                                            <Link to='/login'>Login</Link>
-                                            <Link to='/register'>Register</Link>
+                                            <Link className='text-style' to={'login'}>Login</Link>
+                                            <Link className='text-style' to={'register'}>Register</Link>
                                         </>
                                 }
                             </Nav.Link>
-                            <Link to='/profile'>
-                                {user?.photoURL ?
-                                    <Image style={{ heigth: '10px', width: '30px' }} roundedCircle
-                                        src={user.photoURL}></Image>
-                                    : <FaUser></FaUser>
+                            <Link >
+                                {
+                                    user?.photoURL ?
+                                        <Image className='my' title={user?.displayName} style={{ heigth: '10px', width: '30px' }} roundedCircle
+                                            src={user.photoURL}></Image>
+
+                                        : <FaUser title={user?.displayName}></FaUser>
                                 }
-                            </Link> */}
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
                     <ToggleBtn toggle={toggle} handleToggleChange={handleToggleChange}></ToggleBtn>
