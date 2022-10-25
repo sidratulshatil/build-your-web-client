@@ -23,7 +23,7 @@ const Courses = () => {
                             <Card.Text>
                                 {c.details.slice(0, 100) + '...'}
                             </Card.Text>
-                            <Button variant="primary" className='bg-warning'><Link to={`/courses/${c._id}`}>Course Details</Link></Button>
+                            <Button variant="primary" className='bg-warning'><Link className='btn-text' to={`/courses/${c._id}`}>Course Details</Link></Button>
                         </Card.Body>
                     </Card>)
                 }

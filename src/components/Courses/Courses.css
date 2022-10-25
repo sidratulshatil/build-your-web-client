@@ -15,6 +15,10 @@
     margin-top: 50px;
 }
 
+.btn-text {
+    text-decoration: none;
+}
+
 @media screen and (max-width:688px) {
     .course-card-container {
 
