@@ -8,7 +8,7 @@ import Pdf from "react-to-pdf";
 
 const CourseDetals = () => {
     const course = useLoaderData()
-    const { name, img, details } = course
+    const { name, img, details, price } = course
 
 
     const examRef = useRef()
@@ -22,6 +22,7 @@ const CourseDetals = () => {
                     {({ toPdf }) => <Link onClick={toPdf} title='Download Pdf' className='download-btn'><FaDownload >
                     </FaDownload></Link>}
                 </Pdf></Card.Title>
+                <div><h4>Price:{price}</h4></div>
                 <Card.Text >
                     {details}
                 </Card.Text>

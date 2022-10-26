@@ -7,8 +7,8 @@ import './Courses.css'
 
 const Courses = () => {
     const course = useLoaderData()
-    // const { id, name } = course
-    console.log(course.name)
+
+
     return (
         <div className='course-container'>
             <div>
