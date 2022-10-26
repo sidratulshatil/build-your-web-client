@@ -22,6 +22,12 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
+                if (user) {
+                    navigate(from, { replace: true })
+                }
+                else {
+                    alert('You are not logged in!!')
+                }
             })
             .catch(error => {
                 console.log(error)
@@ -32,6 +38,12 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
+                if (user) {
+                    navigate(from, { replace: true })
+                }
+                else {
+                    alert('You are not logged in!!')
+                }
             })
             .catch(error => {
                 console.log(error)
@@ -58,6 +70,7 @@ const Login = () => {
                 console.log(error)
                 setError(error.message)
             })
+
     }
     return (
         <div className=' login-div'>
