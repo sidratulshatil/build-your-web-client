@@ -1,26 +1,44 @@
 .nav-style {
-    background-color: #f89494;
+    background-color: #0241AD;
     font-weight: 700;
 }
 
 .nav-text {
-    color: rgb(58, 59, 59);
+    color: rgb(251, 255, 255);
     font-weight: 900;
+}
+
+.nav-text:hover {
+    color: rgb(251, 255, 255);
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 .text-style {
     text-decoration: none;
     margin-left: 5px;
     margin-top: 5px;
-    background-color: #c96969;
-    color: rgb(58, 59, 59);
+    color: white;
+    background-color: rgb(65, 65, 253);
     padding: 5px;
     border-radius: 10px;
+    font-weight: 700;
+}
+
+.text-style:hover {
+    color: white;
+    background-color: #377ffc;
 }
 
 .my {
     margin-top: 50%;
 
+}
+
+.header-logo {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
 }
 
 @media screen and (max-width:688px) {

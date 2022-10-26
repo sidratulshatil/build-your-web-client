@@ -96,7 +96,7 @@ const Login = () => {
                 </div>
 
                 <span><p>Didn't have an account?<Link to='/register'>Register Now</Link></p></span>
-                <Button variant="primary" type="submit">
+                <Button className='register-btn' type="submit">
                     Login
                 </Button>
 

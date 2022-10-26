@@ -21,7 +21,7 @@
     line-height: 16px;
     cursor: pointer;
     color: rgb(246, 248, 250);
-    background-color: rgb(78, 77, 77);
+    background-color: rgb(5, 5, 5);
     box-shadow: 0 2px 4px rgb(0, 0, 0, 0.25);
     padding: 8px 12px;
     border-radius: 3px;
@@ -31,7 +31,7 @@
 }
 
 .disable {
-    background-color: #f8c3c3;
+    background-color: white;
     left: 2px;
     color: black;
 }

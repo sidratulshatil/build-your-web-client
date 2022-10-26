@@ -1,12 +1,14 @@
 .course-detail-body {
     margin: auto;
-    margin-top: 20px;
+    margin-top: 90px;
     margin-bottom: 20px;
-    border: 1px solid rebeccapurple;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .checkout-btn {
     background-color: red;
+    color: white;
+    font-weight: 700;
     border: none;
 }
 
@@ -16,4 +18,12 @@
 
 .download-btn {
     padding-left: 10px;
+}
+
+.course-price {
+    color: rgb(95, 52, 252);
+}
+
+.course-title {
+    font-weight: 800;
 }

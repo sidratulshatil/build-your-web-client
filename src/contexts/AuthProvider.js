@@ -23,9 +23,11 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
     const providerLogin = (provider) => {
+        setLoading(true)
         return signInWithPopup(auth, provider)
     }
     const githubLogin = (provider) => {
+        setLoading(true)
         return signInWithPopup(auth, provider)
     }
     const logOut = () => {

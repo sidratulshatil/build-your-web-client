@@ -65,8 +65,8 @@ const Register = () => {
                     {error}
                 </Form.Text>
                 <span><p>Already have an account?<Link to='/login'>Login Now</Link></p></span>
-                <Button variant="primary" type="submit">
-                    register
+                <Button className='register-btn' type="submit">
+                    Register
                 </Button>
 
             </Form>

@@ -2,17 +2,21 @@
     border: 1px solid black;
     height: 100%;
     padding: 20px;
-    background-color: rgb(205, 154, 165);
+    background-color: #0e356e;
+    margin-top: 50px;
 }
 
 .list-container p {
     padding: 8px;
-    background-color: rgb(163, 20, 20);
+    background-color: rgb(79, 79, 79);
     border-radius: 10px;
-    color: azure;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
     text-decoration: none;
+
 }
 
 .list-container Link {
     text-decoration: none;
+
 }

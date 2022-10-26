@@ -5,6 +5,7 @@ import { FaUser } from 'react-icons/fa';
 import ToggleBtn from '../ToggleBtn/ToggleBtn';
 import './Header.css'
 import { AuthContext } from '../../contexts/AuthProvider';
+import logo from './logo.png'
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
 
@@ -21,9 +22,10 @@ const Header = () => {
     return (
 
         <div>
-            <Navbar className='nav-style' expand="lg">
+            <Navbar className='nav-style fixed-top' expand="lg">
                 <Container>
-                    <Navbar.Brand className='nav-text'>Build Your Web</Navbar.Brand>
+                    <Navbar.Brand href='/' className='nav-text'><img className='header-logo' src={logo} alt="" /> <span className='nav-style-text'>
+                        Build</span> Your Web</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
@@ -55,13 +57,14 @@ const Header = () => {
                                         <Image className='my' title={user?.displayName} style={{ heigth: '10px', width: '30px' }} roundedCircle
                                             src={user.photoURL}></Image>
 
-                                        : <FaUser title={user?.displayName}></FaUser>
+                                        : <FaUser ></FaUser>
                                 }
                             </Link>
                         </Nav>
                     </Navbar.Collapse>
-                    <ToggleBtn toggle={toggle} handleToggleChange={handleToggleChange}></ToggleBtn>
+                    <ToggleBtn className='tg-container' toggle={toggle} handleToggleChange={handleToggleChange}></ToggleBtn>
                 </Container>
+
             </Navbar>
         </div>
 
