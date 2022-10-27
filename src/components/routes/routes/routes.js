@@ -20,7 +20,7 @@ export const routes = createBrowserRouter([
             { path: '/blog', element: <Blog></Blog> },
             { path: '/login', element: <Login></Login> },
             { path: '/register', element: <Register></Register> },
-            { path: '/cheackout/:id', element: <PrivateRoute><CheackOut></CheackOut></PrivateRoute>, loader: ({ params }) => fetch(`http://localhost:5000/cheackout/${params.id}`) },
+            { path: '/cheackout/:id', element: <PrivateRoute><CheackOut></CheackOut></PrivateRoute>, loader: ({ params }) => fetch(`https://build-your-web-server.vercel.app/cheackout/${params.id}`) },
             { path: '*', element: <Error></Error> },
         ]
     }

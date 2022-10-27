@@ -41,6 +41,10 @@
     border-radius: 50%;
 }
 
+.user-name {
+    color: white;
+}
+
 @media screen and (max-width:688px) {
     .my {
         margin-top: 0;

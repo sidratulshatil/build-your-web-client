@@ -27,3 +27,8 @@
 .course-title {
     font-weight: 800;
 }
+
+.c-name {
+    font-style: italic;
+    color: red;
+}

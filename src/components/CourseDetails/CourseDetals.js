@@ -18,11 +18,11 @@ const CourseDetals = () => {
 
             <Card.Img variant="top" src={img} />
             <Card.Body>
-                <Card.Title className='course-title'>Course Name: {name}   <Pdf targetRef={examRef} filename="Course-details.pdf">
+                <Card.Title className='course-title'>Course Name: <span className='course-name'>{name}</span>   <Pdf targetRef={examRef} filename="Course-details.pdf">
                     {({ toPdf }) => <Link onClick={toPdf} title='Download Pdf' className='download-btn'><FaDownload >
                     </FaDownload></Link>}
                 </Pdf></Card.Title>
-                <div><h4 className='course-price'>Price:{price}</h4></div>
+                <div><h4 className='course-price'>Price: {price}</h4></div>
                 <Card.Text >
                     {details}
                 </Card.Text>

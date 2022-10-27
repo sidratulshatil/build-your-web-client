@@ -41,7 +41,7 @@ const CheackOut = () => {
                     <Form.Label>Course Price</Form.Label>
                     <Form.Control placeholder={price} disabled />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button className='pay-btn' variant="primary" type="submit">
                     Pay
                 </Button>
             </Form>
