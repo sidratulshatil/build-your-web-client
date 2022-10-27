@@ -7,7 +7,7 @@ Project Details:-
 - Use Firebase to Authentication User Info
 - Use Private Route to secure some Route
 - Connected Components By React Router
-- A Responsive Site
+- A Responsive Site .\
 Framework & Library Used in this project
 - React Bootstrap
 - React Icons
